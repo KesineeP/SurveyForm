@@ -29,7 +29,7 @@ body {
 .container{
   width: 50%;
   background-color: lightblue;
-  opacity: 0.8;
+  opacity: 0.95;
   margin: 0 auto;
   padding: 10px 0px 20px 10px;
   border-radius: 5px;
@@ -161,6 +161,7 @@ footer {
     width: 100%;
     font-size: 15px;
     line-height: 22px;
+    opacity: 0.9;
   }
   .form-control,
   .input-textarea {
