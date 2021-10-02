@@ -1,237 +1,245 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="./surveyFormStyle.css" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-  <link rel="stylesheet" href="./surveyFormStyle.css">
-  <meta name="theme-color" content="#fafafa">
-</head>
+  <body>
+    <main>
+      <header class="box">
+        <h1 id="title">Travel Survey</h1>
+        <p id="description">Life is a jorney, Enjoy the ride.</p>
+      </header>
 
-<body>
+      <form id="survey-form" class="container">
+        <h2>Personal Info</h2>
+        <div class="form-group">
+          <label id="name-label" for="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="First"
+            required
+          />
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            class="form-control"
+            placeholder="Last"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Age:</label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            class="form-control"
+            min="18"
+            max="80"
+            placeholder="Age"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <p>What is your current role?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option value="">Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="traveler">Full Time Traveler</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Have you travel internationally in the past 3 years?</p>
+          <label>
+            <input
+              type="radio"
+              name="internationalFlight"
+              value="yes"
+              class="input-radio"
+            />
+            Yes</label
+          >
+          <label>
+            <input
+              type="radio"
+              name="internationalFlight"
+              value="no"
+              class="input-radio"
+            />
+            No</label
+          >
+        </div>
 
-<main>
+        <div class="form-group">
+          <p>How often do you travel?</p>
+          <label>
+            <input
+              type="radio"
+              name="travel"
+              class="input-radio"
+              value="1-2 times"
+            />
+            1 to 2 times a year</label
+          >
+          <label>
+            <input
+              type="radio"
+              name="travel"
+              class="input-radio"
+              value="2-3 times"
+            />
+            2 to 3 times a year</label
+          >
+          <label>
+            <input
+              type="radio"
+              name="travel"
+              class="input-radio"
+              value="3-4 times"
+            />
+            3 to 4 times a year</label
+          >
+          <label>
+            <input
+              type="radio"
+              name="travel"
+              class="input-radio"
+              value="morethan4times"
+            />
+            More than 4 times a year</label
+          >
+        </div>
 
-  <header class="box">
-    <h1 id="title">
-      Travel Survey
-    </h1>
-    <p id="description">Life is a jorney, Enjoy the ride.</p>
-  </header>
+        <div class="form-group">
+          <p>Where are your preference destinations?</p>
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="europe"
+              class="input-checkbox"
+            />
+            Europe</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="north-america"
+              class="input-checkbox"
+            />
+            North America</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="south-america"
+              class="input-checkbox"
+            />
+            South America</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="africa"
+              class="input-checkbox"
+            />
+            Africa</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="asia"
+              class="input-checkbox"
+            />
+            Asia</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="prefer"
+              value="australia"
+              class="input-checkbox"
+            />
+            Australia</label
+          >
+        </div>
 
-  <form id="survey-form" class="container">
-    <h2>Personal Info</h2>
-    <div class="form-group">
-      <label id="name-label" for="name">Name:</label>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        class="form-control"
-        placeholder="First"
-        required
-      />
-      <input
-        type="text"
-        name="lastname"
-        id="lastname"
-        class="form-control"
-        placeholder="Last"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label id="number-label" for="number">Age:</label>
-      <input
-        type="number"
-        name="age"
-        id="number"
-        class="form-control"
-        min="18"
-        max="80"
-        placeholder="Age"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label id="email-label" for="email">Email:</label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        class="form-control"
-        placeholder="Enter your Email"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <p>What is your current role?</p>
-      <select id="dropdown" name="role" class="form-control" required>
-        <option value="">Select current role</option>
-        <option value="student">Student</option>
-        <option value="job">Full Time Job</option>
-        <option value="traveler">Full Time Traveler</option>
-        <option value="other">Other</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <p>Have you been travel internationally in the past 3 years?</p>
-      <label>
-        <input
-          type="radio"
-          name="internationalFlight"
-          value="yes"
-          class="input-radio"
-        /> Yes</label
-      >
-      <label>
-        <input
-          type="radio"
-          name="internationalFlight"
-          value="no"
-          class="input-radio"
-        /> No</label
-      >
-    </div>
+        <div class="form-group">
+          <p>Where is your favorite place you have ever visited?</p>
+          <textarea
+            id="country"
+            name="country"
+            class="input-textarea"
+            placeholder="My favorite place is..."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <p>Where is your up coming trip?</p>
+          <textarea
+            id="favorite-country"
+            name="country"
+            class="input-textarea"
+            placeholder="I'm going to..."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+      <footer>Code by Kesinee Powers</footer>
+    </main>
 
-    <div class="form-group">
-      <p>How often do you travel?</p>
-      <label>
-        <input
-          type="radio"
-          name="travel"
-          class="input-radio"
-          value="1-2 times"
-        />
-        1 to 2 times a year</label
-      >
-      <label>
-        <input
-          type="radio"
-          name="travel"
-          class="input-radio"
-          value="2-3 times"
-        />
-        2 to 3 times a year</label
-      >
-      <label>
-        <input
-          type="radio"
-          name="travel"
-          class="input-radio"
-          value="3-4 times"
-        />
-        3 to 4 times a year</label
-      >
-      <label>
-        <input
-          type="radio"
-          name="travel"
-          class="input-radio"
-          value="morethan4times"
-        />
-        More than 4 times a year</label
-      >
-    </div>
-
-    <div class="form-group">
-      <p>Where are your preference destinations?</p>
-      <label>
-        <input
-          type="checkbox"
-          name="prefer"
-          value="europe"
-          class="input-checkbox"
-        />
-        Europe</label
-      >
-      <label>
-        <input
-          type="checkbox"
-          name="prefer"
-          value="north-america"
-          class="input-checkbox"
-        />
-        North America</label
-      >
-      <label>
-        <input
-          type="checkbox"
-          name="prefer"
-          value="south-america"
-          class="input-checkbox"
-        />
-        South America</label
-      >
-      <label>
-        <input
-          type="checkbox"
-          name="prefer"
-          value="africa"
-          class="input-checkbox"
-        />
-        Africa</label
-      >
-      <label>
-        <input
-          type="checkbox"
-          name="prefer"
-          value="asia"
-          class="input-checkbox"
-        />
-        Asia</label
-      >
-      <label
-      ><input
-        type="checkbox"
-        name="prefer"
-        value="australia"
-        class="input-checkbox"
-      />
-        Australia</label
-      >
-    </div>
-
-    <div class="form-group">
-      <p>Where is your favorite place you have ever visited?</p>
-      <textarea
-        id="country"
-        name="country"
-        class="input-textarea"
-        placeholder="My favorite place is..."></textarea>
-    </div>
-    <div class="form-group">
-      <p>Where is your up coming trip?</p>
-      <textarea
-        id="favorite-country"
-        name="country"
-        class="input-textarea"
-        placeholder="I'm going to..."></textarea>
-    </div>
-    <div class="form-group">
-      <button type="submit" id="submit" class="submit-button">Submit</button>
-    </div>
-  </form>
-  <footer>Code by Kesinee Powers</footer>
-</main>
-
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "anonymizeIp", true);
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
 </html>
